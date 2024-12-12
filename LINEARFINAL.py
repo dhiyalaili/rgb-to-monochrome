@@ -15,11 +15,11 @@ uploaded_file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 if uploaded_file is not None:
     # Open image
     image = Image.open(uploaded_file)
-    st.image(image, caption="Original Image", use_column_width=True)
+    st.image(image, caption="Original Image", use_container_width=True)
 
     # Convert to monochrome
     monochrome_image = rgb_to_monochrome(image)
-    st.image(monochrome_image, caption="Monochrome Image", use_column_width=True)
+    st.image(monochrome_image, caption="Monochrome Image", use_container_width=True)
 
     # Download button
     monochrome_array = np.array(monochrome_image)
